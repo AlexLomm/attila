@@ -27,6 +27,7 @@ module.exports = function (env, argv) {
   const config = {
     mode: isProd ? 'production' : 'development',
     devtool: isProd ? false : 'inline-source-map',
+    watch: argv.watch,
     entry: {
       // default script
       script: './src/js/script.js',

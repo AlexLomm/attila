@@ -71,8 +71,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build:dev": "NODE_ENV=\"development\" webpack",
     "build": "NODE_ENV=\"production\" webpack",
+    "build:dev": "NODE_ENV=\"development\" webpack",
+    "watch": "npm run build:dev -- --watch",
     "publish": "npm run build && bash zip.bash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

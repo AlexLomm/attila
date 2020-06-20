@@ -1,0 +1,67 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: no-repeat center;
+    background-size: contain;
+    opacity: 0.8;
+    transition: opacity linear 0.1s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.icon-star::before {
+  background-image: url(../icon/star.svg);
+}
+
+.icon-mail::before {
+  background-image: url(../icon/mail.svg);
+}
+
+.icon-globe::before {
+  background-image: url(../icon/globe.svg);
+}
+
+.icon-arrow-left::before {
+  background-image: url(../icon/arrow-left.svg);
+}
+
+.icon-arrow-right::before {
+  background-image: url(../icon/arrow-right.svg);
+}
+
+.icon-search::before {
+  background-image: url(../icon/search.svg);
+}
+
+.icon-rss::before {
+  background-image: url(../icon/rss.svg);
+}
+
+.icon-twitter::before {
+  background-image: url(../icon/twitter.svg);
+}
+
+.icon-facebook::before {
+  background-image: url(../icon/facebook.svg);
+}
+
+.icon-menu::before {
+  background-image: url(../icon/menu.svg);
+}
+
+.icon-linkedin::before {
+  background-image: url(../icon/linkedin.svg);
+}

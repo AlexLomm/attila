@@ -8,10 +8,6 @@
     "ghost-api": "v3"
   },
   "license": "MIT",
-  "screenshots": {
-    "desktop": "src/screenshot-desktop.jpg",
-    "mobile": "src/screenshot-mobile.jpg"
-  },
   "author": {
     "name": "Peter Amende",
     "email": "xoxo@zutrinken.com",
@@ -34,11 +30,22 @@
     "url": "https://github.com/zutrinken/attila.git"
   },
   "dependencies": {
+    "fitvids": "^2.1.1",
     "ghosthunter": "github:jamalneufeld/ghostHunter"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "grunt": "^1.0.4",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-runtime": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/runtime": "^7.10.3",
+    "autoprefixer": "^9.8.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "cssnano": "^4.1.10",
+    "dree": "^2.4.14",
+    "file-loader": "^6.0.0",
+    "grunt": "^1.1.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-compress": "^1.6.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -46,7 +53,30 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^2.1.0",
-    "load-grunt-tasks": "^3.5.2"
+    "image-webpack-loader": "^4.6.0",
+    "load-grunt-tasks": "^3.5.2",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.11.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "prettier": "^2.0.5",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "svg-url-loader": "^6.0.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV=\"production\" webpack",
+    "build:dev": "NODE_ENV=\"development\" webpack",
+    "watch": "npm run build:dev -- --watch",
+    "publish": "npm run build && bash zip.bash",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "config": {
     "posts_per_page": 8,

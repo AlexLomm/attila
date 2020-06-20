@@ -1069,7 +1069,8 @@ textarea {
 
   a {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 2rem 0;
     font-size: 2em;
@@ -1080,6 +1081,7 @@ textarea {
     i {
       display: inline-block;
       width: 4rem;
+      line-height: 0;
     }
 
     &.nav-search {
@@ -1799,15 +1801,6 @@ textarea {
   margin-right: 0;
 }
 
-.post-share a i {
-  color: inherit;
-
-  &:before {
-    width: auto;
-    height: auto;
-  }
-}
-
 .post-share .twitter {
   background-color: $color-social-twitter;
 }
@@ -2088,7 +2081,6 @@ textarea {
 
   &:before {
     margin: 0;
-    width: auto;
   }
 }
 
